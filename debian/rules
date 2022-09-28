@@ -1,0 +1,7 @@
+#! /usr/bin/make -f
+
+export PYBUILD_NAME=cppy
+export PYBUILD_AFTER_INSTALL=PYTHONPATH={build_dir} python3 -m sphinx -b html $(CURDIR)/docs/source $(CURDIR)/debian/python-cppy-doc/usr/share/doc/python-cppy-doc/html
+
+%:
+	dh $@ --with python3,sphinxdoc --buildsystem=pybuild

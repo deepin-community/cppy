@@ -1,0 +1,9 @@
+--- a/docs/source/conf.py
++++ b/docs/source/conf.py
+@@ -181,4 +181,4 @@ epub_exclude_files = ['search.html']
+ # -- Options for intersphinx extension ---------------------------------------
+ 
+ # Example configuration for intersphinx: refer to the Python standard library.
+-intersphinx_mapping = {'https://docs.python.org/': None}
+\ No newline at end of file
++intersphinx_mapping = {'python': ('https://docs.python.org/dev', '/usr/share/doc/python3/html/objects.inv')}

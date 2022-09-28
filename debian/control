@@ -1,0 +1,42 @@
+Source: cppy
+Section: python
+Priority: optional
+Maintainer: Sandro Tosi <morph@debian.org>
+Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>,
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-doc <!nodoc>,
+               python3-setuptools,
+               python3-sphinx <!nodoc>,
+               python3-sphinx-rtd-theme <!nodoc>,
+Standards-Version: 4.5.0
+Homepage: https://github.com/nucleic/cppy
+Vcs-Git: https://salsa.debian.org/python-team/modules/cppy.git
+Vcs-Browser: https://salsa.debian.org/python-team/modules/cppy
+
+Package: python-cppy-doc
+Section: doc
+Build-Profiles: <!nodoc>
+Architecture: all
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends},
+Description: C++ headers for (Python) C extension development (documentation)
+ A small C++ header library which makes it easier to write Python extension
+ modules. The primary feature is a PyObject smart pointer which automatically
+ handles reference counting and provides convenience methods for performing
+ common object operations.
+ .
+ This package contains the documentation for cppy.
+
+Package: python3-cppy
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends},
+Recommends: ${python3:Recommends},
+Suggests: ${python3:Suggests},
+Description: C++ headers for (Python) C extension development
+ A small C++ header library which makes it easier to write Python extension
+ modules. The primary feature is a PyObject smart pointer which automatically
+ handles reference counting and provides convenience methods for performing
+ common object operations.

@@ -1,0 +1,11 @@
+cppy (1.1.0-2) unstable; urgency=medium
+
+  * Rebuild to upload a source-only pkg
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 03 Sep 2020 22:57:51 -0400
+
+cppy (1.1.0-1) unstable; urgency=low
+
+  * Initial release; Closes: #966102
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 23 Jul 2020 00:38:35 -0400
