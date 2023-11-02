@@ -1,7 +1,7 @@
 Error reporting
 ===============
 
-In addition to `cppy::ptr`, cppy provides a set a convenience function for
+In addition to `cppy::ptr`, cppy provides a set of convenience functions for
 reporting errors which all return a NULL pointer allowing them to be used as
 follows:
 
@@ -11,14 +11,14 @@ follows:
     {
         cppy::ptr obj_ptr( cppy::incref( obj ) );
         if( !obj_ptr.is_bool() )
-            return type_error( obj_ptr.get(), 'bool' )
-        return obj_ptr.get()
+            return type_error( obj_ptr.get(), "bool" );
+        return obj_ptr.get();
     }
 
 Functions
 ---------
 
-Functions taking two arguments provide sensible pre-formated error messages.
+Functions taking two arguments provide sensible pre-formatted error messages.
 
 .. code:: c++
 

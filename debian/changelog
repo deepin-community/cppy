@@ -1,3 +1,32 @@
+cppy (1.2.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/copyright
+    - update upstream copyright years
+  * debian/control
+    - bump Standards-Version to 4.6.2.0 (no changes needed)
+    - build using pyproject plugin
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 29 Dec 2022 21:02:34 -0500
+
+cppy (1.1.0-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Sandro Tosi ]
+  * Use the new Debian Python Team contact name and address
+  * debian/copyright
+    - extend packaging copyright years
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.6.0, no changes needed.
+
+ -- Sandro Tosi <morph@debian.org>  Sun, 24 Apr 2022 00:25:40 -0400
+
 cppy (1.1.0-2) unstable; urgency=medium
 
   * Rebuild to upload a source-only pkg

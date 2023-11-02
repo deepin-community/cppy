@@ -1,21 +1,21 @@
 Installation and use with setuptools
 ====================================
 
-Since cppy is nothing else than a collection of header that are only compiled
+Since Cppy is nothing else than a collection of header that are only compiled
 when used, installing it is extremely straightforward using pip::
 
     $ pip install cppy
 
 If you want to run the development version, you can install directly from
-Github::
+GitHub::
 
-    $ pip install https://github.com/nucleic/cppy
+    $ pip install git+https://github.com/nucleic/cppy
 
 
-Using cppy in an extensions
+Using Cppy in an extensions
 ---------------------------
 
-To use cppy in your extension (written in C++), you simply need to include it.
+To use Cppy in your extension (written in C++), you simply need to include it.
 
 .. code:: c++
 
@@ -24,7 +24,7 @@ To use cppy in your extension (written in C++), you simply need to include it.
 Cppy includes Python.h so when including cppy.h you do not need to also include
 Python.h.
 
-Every functions, classes exposed by cppy are stored in the `cppy` namespace.
+Every functions, classes exposed by Cppy are stored in the `cppy` namespace.
 
 .. code:: c++
 
@@ -34,9 +34,23 @@ Every functions, classes exposed by cppy are stored in the `cppy` namespace.
 Use with setuptools
 -------------------
 
-Cppy is only needed during the installation step of the projects using it. The
-following example setup.py script illustrates how to use cppy without requiring
-it to be installed before `setup.py` is run.
+Cppy is only needed during the installation step of the projects using it.
+
+When using a PEP 517 compatible build system, one can simply specify cppy as a
+build requirement in ```pyproject.toml``::
+
+    [build-system]
+    requires =  ["setuptools>=42", "wheel", "cppy>=1.2"]
+
+Which will ensure that cppy is available in setup.py allowing to import it at the
+top level of the module. This allows in particular to import ``CppyBuildExt``
+which enforces the use of C++11 and provide access to the cppy headers. On Windows,
+FH4 Exception Handling can be disabled by setting the CPPY_DISABLE_FH4 environment
+variable. This avoids requiring VCRUNTIME140_1.dll
+
+In one is not using a PEP 517 compatible install, the following example setup.py
+script illustrates how to use Cppy without requiring it to be installed before
+`setup.py` is run.
 
 .. code:: python
 
@@ -46,7 +60,7 @@ it to be installed before `setup.py` is run.
     ext_modules = [
         Extension(
             'project',
-            ['module.cpp],
+            ['module.cpp'],
             include_dirs=['.'],
             language='c++',
         ),

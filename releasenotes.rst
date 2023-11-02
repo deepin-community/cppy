@@ -1,7 +1,17 @@
 Cppy Release Notes
-===================
+==================
 
-1.1.0 - unreleased
+1.2.1 - 03/30/2022
+------------------
+- make the pyproject.toml fully PEP 621 compliant PR #19
+
+1.2.0 - 03/11/2022
+------------------
+- expose a build_ext subclass that can be re-used in other projects PR #16
+- use a PEP 517 compatible install procedure PR #16
+- do not access directly ob_type on PyObject use Py_TYPE
+
+1.1.0 - 06/25/2020
 ------------------
 - drop Python 2 support PR #3
 - add documentation and tests PR #3

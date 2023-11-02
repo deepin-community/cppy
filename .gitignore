@@ -1,1 +1,7 @@
-.pc/
+build
+dist
+*.pyc
+*.egg-info
+
+.vscode
+version.py
